@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f2f6"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round"
+        android:onClick="start"
+        android:padding="40dp"
+        android:text="Go!"
+        android:textColor="#EEFF41"
+        android:fontFamily="@font/fontnew"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.386" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Gamelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/sum"
+            android:layout_width="135dp"
+            android:layout_height="69dp"
+            android:fontFamily="@font/fontnew"
+            android:text="26 + 3"
+            android:textSize="35sp"
+            android:gravity="center"
+            android:background="@drawable/rounding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.538"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.071" />
+
+        <TextView
+            android:id="@+id/decision"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:fontFamily="@font/fontnew"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.638" />
+
+        <Button
+            android:id="@+id/playb"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:onClick="playq"
+            android:backgroundTint="#283593"
+            android:background="@drawable/rounding"
+            android:text="Play Again"
+            android:includeFontPadding="true"
+            android:textColor="#fff"
+            android:visibility="visible"
+            android:fontFamily="@font/fontnew"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="410dp"
+            android:layout_height="280dp"
+            android:padding="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.521"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.342">
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/left"
+                android:gravity="fill"
+                android:onClick="Choose"
+                android:fontFamily="@font/fontnew"
+                android:tag="0"
+                android:text="15"
+                android:textAlignment="center"
+                android:textColor="#D50000"
+                android:textSize="40dp"
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+                app:layout_row="0"
+                app:layout_rowWeight="1"
+                tools:ignore="RtlCompat" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/topright"
+                android:gravity="center"
+                android:onClick="Choose"
+                android:tag="1"
+                android:fontFamily="@font/fontnew"
+                android:text="15"
+                android:textColor="#6200EA"
+                android:textSize="40dp"
+                app:layout_column="1"
+                app:layout_columnWeight="1"
+                app:layout_row="0"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btmleft"
+                android:gravity="center"
+                android:onClick="Choose"
+                android:tag="2"
+                android:text="15"
+                android:fontFamily="@font/fontnew"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+                app:layout_row="1"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btmright"
+                android:gravity="center"
+                android:onClick="Choose"
+                android:tag="3"
+                android:text="15"
+                android:fontFamily="@font/fontnew"
+                android:textAlignment="center"
+                android:textColor="#FDD835"
+                android:textSize="40dp"
+                app:layout_column="1"
+                app:layout_columnWeight="1"
+                app:layout_row="1"
+                app:layout_rowWeight="1" />
+        </androidx.gridlayout.widget.GridLayout>
+
+        <TextView
+            android:id="@+id/scored"
+            android:layout_width="80dp"
+            android:layout_height="69dp"
+            android:background="@drawable/rounding"
+            android:fontFamily="@font/fontnew"
+            android:padding="10dp"
+            android:gravity="center"
+            android:text="0/0"
+            android:textColor="#C32323"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.91"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.072" />
+
+        <TextView
+            android:id="@+id/timing"
+            android:layout_width="80dp"
+            android:layout_height="69dp"
+            android:background="@drawable/rounding"
+            android:fontFamily="@font/fontnew"
+            android:padding="10dp"
+            android:text="60s"
+            android:gravity="center"
+            android:textSize="29sp"
+            android:textColor="#0020C6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.123"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.072" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
